@@ -1,0 +1,37 @@
+{
+    "nav": {
+        "home": "Home",
+        "gallery": "Galleria",
+        "book_now": "Prenota ora"
+    },
+    "hero": {
+        "hero_home": "A few steps from the sea, designed for those seeking tranquility and comfort.",
+        "hero_gallery": "Il nostro BNB"
+    },
+    "services": {
+        "title": "I nostri servizi",
+        "wifi": "Wi fi",
+        "parking": "Parcheggio",
+        "air_conditioning": "Aria condizionata",
+        "heating": "Riscaldamento",
+        "essentials": "Essenziali",
+        "fire_alarm": "Allarme antincendio",
+        "fridge": "Frigobar",
+        "tv": "TV",
+        "coffee_machine": "Macchina del caffè"
+    },
+    "conditions": {
+        "title": "Condizioni della struttura",
+        "time": "Entro le ore",
+        "credit_card_accepted": "Carte di credito accettate"
+    },
+    "ready": {
+        "title": "Pronto per il tuo soggiorno a San Vito?",
+        "description": "Contattaci per informazioni o per prenotare la tua camera."
+    },
+    "common": {
+        "all": "Tutte",
+        "all_rights_reserved": "Tutti i diritti riservati.",
+        "created_by": "Sito creato da"
+    }
+}
