@@ -1,0 +1,37 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "gallery": "Galerie",
+        "book_now": "Jetzt buchen"
+    },
+    "hero": {
+        "hero_home": "Nur wenige Schritte vom Meer entfernt – ideal für alle, die Ruhe und Komfort suchen.",
+        "hero_gallery": "Unser B&B"
+    },
+    "services": {
+        "title": "Unsere Services",
+        "wifi": "WLAN",
+        "parking": "Parkplatz",
+        "air_conditioning": "Klimaanlage",
+        "heating": "Heizung",
+        "essentials": "Grundausstattung",
+        "fire_alarm": "Rauchmelder",
+        "fridge": "Kühlschrank",
+        "tv": "Fernseher",
+        "coffee_machine": "Kaffeemaschine"
+    },
+    "conditions": {
+        "title": "Bedingungen der Unterkunft",
+        "time": "Flexible Uhrzeiten",
+        "credit_card_accepted": "Kreditkarte akzeptiert"
+    },
+    "ready": {
+        "title": "Bereit für Ihren Aufenthalt in San Vito?",
+        "description": "Kontaktieren Sie uns für Informationen oder um Ihr Zimmer zu buchen."
+    },
+    "common": {
+        "all": "Alle",
+        "all_rights_reserved": "Alle Rechte vorbehalten.",
+        "created_by": "Website erstellt von"
+    }
+}

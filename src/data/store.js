@@ -6,6 +6,7 @@ export const store = reactive({
     languages: [
       { code: 'it', name: 'Italiano', flag: '🇮🇹' },
       { code: 'en', name: 'English', flag: '🇬🇧' },
+      { code: 'de', name: 'German', flag: '🇩🇪' },
     ],
   },
   YEAR: new Date().getFullYear(),

@@ -194,7 +194,6 @@ export default {
   transform: translateY(-10px);
 }
 
-/* Responsive */
 @media (max-width: 640px) {
   /* .language-code {
     display: none;
