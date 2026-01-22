@@ -65,6 +65,7 @@ export default {
       this.isOpen = !this.isOpen;
     },
     changeLanguage(code) {
+      window.scrollTo(0, 0);
       this.store.LANG.current = code;
       this.$i18n.locale = code;
       localStorage.setItem('user-language', code);
