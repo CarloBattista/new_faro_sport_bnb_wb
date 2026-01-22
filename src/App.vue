@@ -20,6 +20,8 @@ export default {
 
       if (storedLang) {
         this.store.LANG.current = storedLang;
+        this.$i18n.locale = storedLang;
+        document.documentElement.lang = storedLang;
       }
     },
   },
