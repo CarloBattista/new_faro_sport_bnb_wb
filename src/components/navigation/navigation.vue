@@ -4,8 +4,8 @@
       to="/"
       class="md:text-2xl text-base uppercase lustria-font-loaded whitespace-nowrap transition-colors duration-300"
       :class="isDarkBg || isOpen ? 'text-white' : 'text-[#101828]'"
-      >NEW FARO SPORT BNB
-    </RouterLink>
+      >NEW FARO SPORT BNB</RouterLink
+    >
     <div class="md:flex hidden lg:gap-8 gap-3 items-center">
       <RouterLink
         to="/"
@@ -39,13 +39,17 @@
           <div class="flex flex-col gap-8">
             <RouterLink to="/" class="nav-item text-xl lustria-font-loaded text-white">{{ $t('nav.home') }}</RouterLink>
             <RouterLink to="/gallery" class="nav-item text-xl lustria-font-loaded text-white">{{ $t('nav.gallery') }}</RouterLink>
+            <a href="https://www.newfarosport.it/" target="_blank" class="nav-item text-xl lustria-font-loaded text-white flex items-top">
+              Sports
+              <ArrowUpRight size="16" />
+            </a>
             <a href="tel:+393911412884" class="btn-item">
               <buttonNf variant="outlined" :label="$t('nav.book_now')" />
             </a>
           </div>
           <div class="w-full flex items-center gap-6">
-            <a href="#" target="_blank" class="text-white text-sm font-normal">Instagram</a>
-            <a href="#" target="_blank" class="text-white text-sm font-normal">Facebook</a>
+            <a v-if="false" href="#" target="_blank" class="text-white text-sm font-normal">Instagram</a>
+            <a v-if="false" href="#" target="_blank" class="text-white text-sm font-normal">Facebook</a>
             <LanguageSwitcher dropdownPosition="top" class="ml-auto" />
           </div>
         </div>
@@ -59,11 +63,17 @@
 import buttonNf from '../button/button-nf.vue';
 import LanguageSwitcher from '../language-switcher.vue';
 
+// ICONS
+import { ArrowUpRight } from 'lucide-vue-next';
+
 export default {
   name: 'navigation',
   components: {
     buttonNf,
     LanguageSwitcher,
+
+    // ICONS
+    ArrowUpRight,
   },
   data() {
     return {
@@ -186,8 +196,12 @@ export default {
   animation-delay: 300ms;
 }
 
-.menu-mobile .btn-item {
+.menu-mobile .nav-item:nth-child(3) {
   animation-delay: 400ms;
+}
+
+.menu-mobile .btn-item {
+  animation-delay: 500ms;
 }
 
 @keyframes slide-fade {

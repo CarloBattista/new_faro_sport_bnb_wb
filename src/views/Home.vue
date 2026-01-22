@@ -1,7 +1,7 @@
 <template>
   <navigation />
   <main class="relative">
-    <hero data-theme="dark" :title="$t('hero.hero_home')" />
+    <hero data-theme="dark" image="https://www.giovannicarrieri.com/photography/italy/taranto/taranto-mar-grande.jpg" :title="$t('hero.hero_home')" />
     <!-- SERVICES -->
     <section data-theme="light" class="relative w-full py-[100px] md:px-16 px-4 flex flex-col gap-14">
       <div class="relative w-full flex items-center">
@@ -65,7 +65,7 @@
         <h2 class="text-white text-3xl lustria-font-loaded text-center">{{ $t('ready.title') }}</h2>
         <h2 class="text-white text-base text-center">{{ $t('ready.description') }}</h2>
       </div>
-      <a href="tel:+393911412884" class="mt-8 flex items-center justify-center">
+      <a href="tel:+393911412884" class="w-fit mx-auto mt-8 flex items-center justify-center">
         <buttonNf variant="outlined" :label="$t('nav.book_now')" />
       </a>
     </section>
