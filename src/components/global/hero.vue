@@ -1,7 +1,7 @@
 <template>
   <div class="hero relative w-full overflow-hidden" :class="'size-' + size">
     <img :src="image" alt="hero image" class="hero-image relative z-10 w-full h-full object-cover" />
-    <div class="absolute z-20 top-0 left-0 w-full h-full bg-black opacity-50"></div>
+    <div class="hero-overlay absolute z-20 top-0 left-0 w-full h-full bg-black opacity-50"></div>
     <div class="hero-text absolute z-50 bottom-0 left-0 w-full md:px-16 px-4 py-8 flex flex-col">
       <h1 class="text-white md:text-5xl text-3xl lustria-font-loaded lg:w-[70%] md:w-[90%] w-full">{{ title }}</h1>
     </div>
@@ -31,7 +31,8 @@ export default {
   height: 65svh;
 }
 
-.hero-image {
+.hero-image,
+.hero-overlay {
   animation: appear 550ms cubic-bezier(0.215, 0.61, 0.355, 1) 1 normal forwards;
 }
 
