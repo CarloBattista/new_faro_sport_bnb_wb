@@ -19,6 +19,15 @@
         :class="isDarkBg ? 'text-white' : 'text-[#101828]'"
         >{{ $t('nav.gallery') }}</RouterLink
       >
+      <a
+        href="https://www.newfarosport.it/"
+        target="_blank"
+        class="nav-item md:text-base text-sm lustria-font-loaded transition-colors duration-300 flex items-top"
+        :class="isDarkBg ? 'text-white' : 'text-[#101828]'"
+      >
+        Sports
+        <ArrowUpRight size="16" />
+      </a>
       <LanguageSwitcher :theme="isDarkBg ? 'dark' : 'light'" />
       <a href="tel:+393911412884">
         <buttonNf :variant="isDarkBg ? 'outlined' : 'primary'" :label="$t('nav.book_now')" />
@@ -102,6 +111,18 @@ export default {
       if (window.innerWidth >= 768 && this.isOpen) {
         this.isOpen = false;
       }
+    },
+  },
+  watch: {
+    isOpen: {
+      handler(value) {
+        if (value) {
+          document.body.classList.add('overflow-hidden');
+        } else {
+          document.body.classList.remove('overflow-hidden');
+        }
+      },
+      immediate: true,
     },
   },
   mounted() {

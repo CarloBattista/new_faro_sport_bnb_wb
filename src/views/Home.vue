@@ -30,6 +30,12 @@
         </h2>
       </div>
     </section>
+    <!-- MAP -->
+    <section data-theme="light" class="relative w-full h-[650px] py-[100px] md:px-16 px-4">
+      <div id="canvas-for-googlemap" class="w-full h-full" frameborder="0">
+        <iframe title="Google Maps New Faro Sport" class="w-full h-full" :src="BASE_URL + '?q=' + PLACE + '&key=' + KEY"></iframe>
+      </div>
+    </section>
     <!-- CONDITIONS -->
     <section data-theme="dark" class="relative w-full py-16 md:px-16 px-4 bg-[#101828]">
       <div class="relative w-full flex items-center justify-center">
@@ -104,6 +110,10 @@ export default {
   data() {
     return {
       store,
+
+      BASE_URL: 'https://www.google.com/maps/embed/v1/place',
+      KEY: 'AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8',
+      PLACE: 'new faro sport,via anello di san cataldo 10, 74122 taranto ta', // new+faro+sport,+Via+Anello+di+San+Cataldo,+74122+Taranto+TA
     };
   },
   mounted() {
