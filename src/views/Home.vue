@@ -112,7 +112,7 @@ export default {
       store,
 
       BASE_URL: 'https://www.google.com/maps/embed/v1/place',
-      KEY: 'AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8',
+      KEY: import.meta.env.VITE_GOOGLE_KEY,
       PLACE: 'new faro sport,via anello di san cataldo 10, 74122 taranto ta', // new+faro+sport,+Via+Anello+di+San+Cataldo,+74122+Taranto+TA
     };
   },
