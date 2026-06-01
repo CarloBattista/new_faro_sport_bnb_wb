@@ -1,9 +1,9 @@
 <template>
-  <div class="relative w-full h-[500px] group overflow-hidden rounded-xl">
+  <div class="relative w-full max-h-[700px] aspect-video group overflow-hidden rounded-xl">
     <!-- Slides -->
     <div class="flex h-full transition-transform duration-700 ease-in-out" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
       <div v-for="(image, index) in images" :key="index" class="min-w-full h-full relative">
-        <img :src="image" class="w-full h-full object-cover" alt="Slider Image" />
+        <img :src="'/_resources/images/struttura' + image" class="w-full h-full object-cover" alt="Slider Image" />
         <!-- Optional overlay for better contrast -->
         <div class="absolute inset-0 bg-black/10"></div>
       </div>

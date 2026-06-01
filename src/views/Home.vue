@@ -1,7 +1,7 @@
 <template>
   <navigation />
   <main class="relative">
-    <hero data-theme="dark" image="https://www.giovannicarrieri.com/photography/italy/taranto/taranto-mar-grande.jpg" :title="$t('hero.hero_home')" />
+    <hero data-theme="dark" image="/_resources/images/struttura/orizzontale/_webp/IMG_5638.webp" :title="$t('hero.hero_home')" />
     <!-- SERVICES -->
     <section data-theme="light" class="relative w-full py-[100px] md:px-16 px-4 flex flex-col gap-14">
       <div class="relative w-full flex items-center">

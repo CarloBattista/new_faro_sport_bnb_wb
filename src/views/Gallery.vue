@@ -1,12 +1,7 @@
 <template>
   <navigation />
   <main class="relative">
-    <hero
-      data-theme="dark"
-      size="min"
-      image="https://www.giovannicarrieri.com/photography/italy/taranto/taranto-mar-grande.jpg"
-      :title="$t('hero.hero_gallery')"
-    />
+    <hero data-theme="dark" size="min" image="/_resources/images/struttura/orizzontale/_webp/IMG_5649.webp" :title="$t('hero.hero_gallery')" />
     <!-- GALLERY SLIDER -->
     <section data-theme="light" class="relative w-full py-16 md:px-16 px-4">
       <slider :images="store.gallery" :autoPlay="true" :interval="10000" />
