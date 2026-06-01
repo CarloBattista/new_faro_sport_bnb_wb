@@ -1,6 +1,6 @@
 <template>
   <div class="hero relative w-full overflow-hidden" :class="'size-' + size">
-    <img :src="image" alt="hero image" class="hero-image relative z-10 w-full h-full object-cover" />
+    <img :src="image" :alt="title || 'New Faro Sport BNB'" class="hero-image relative z-10 w-full h-full object-cover" />
     <div class="hero-overlay absolute z-20 top-0 left-0 w-full h-full bg-black opacity-50"></div>
     <div class="hero-text absolute z-50 bottom-0 left-0 w-full md:px-16 px-4 py-8 flex flex-col">
       <h1 class="text-white md:text-5xl text-3xl lustria-font-loaded lg:w-[70%] md:w-[90%] w-full">{{ title }}</h1>

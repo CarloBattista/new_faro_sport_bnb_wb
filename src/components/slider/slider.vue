@@ -7,7 +7,13 @@
     <!-- Slides -->
     <div class="flex h-full transition-transform duration-700 ease-in-out" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
       <div v-for="(image, index) in images" :key="index" class="min-w-full h-full relative">
-        <img :src="'/_resources/images/struttura' + image" class="w-full h-full object-cover" alt="Slider Image" draggable="false" loading="lazy" />
+        <img
+          :src="'/_resources/images/struttura' + image"
+          class="w-full h-full object-cover"
+          :alt="'New Faro Sport BNB - Foto ' + (index + 1)"
+          draggable="false"
+          loading="lazy"
+        />
         <!-- Optional overlay for better contrast -->
         <div v-if="false" class="absolute inset-0 bg-black/10"></div>
       </div>
