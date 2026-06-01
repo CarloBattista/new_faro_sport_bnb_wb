@@ -1,11 +1,15 @@
 <template>
-  <div class="relative w-full max-h-[700px] aspect-video group overflow-hidden rounded-xl">
+  <div
+    class="relative w-full max-h-[700px] md:aspect-video aspect-9/10 group overflow-hidden rounded-xl"
+    @touchstart="handleTouchStart"
+    @touchend="handleTouchEnd"
+  >
     <!-- Slides -->
     <div class="flex h-full transition-transform duration-700 ease-in-out" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
       <div v-for="(image, index) in images" :key="index" class="min-w-full h-full relative">
-        <img :src="'/_resources/images/struttura' + image" class="w-full h-full object-cover" alt="Slider Image" />
+        <img :src="'/_resources/images/struttura' + image" class="w-full h-full object-cover" alt="Slider Image" draggable="false" loading="lazy" />
         <!-- Optional overlay for better contrast -->
-        <div class="absolute inset-0 bg-black/10"></div>
+        <div v-if="false" class="absolute inset-0 bg-black/10"></div>
       </div>
     </div>
     <!-- Navigation Arrows -->
@@ -75,6 +79,8 @@ export default {
     return {
       currentIndex: 0,
       timer: null,
+      touchStartX: 0,
+      touchEndX: 0,
     };
   },
   methods: {
@@ -115,6 +121,21 @@ export default {
       if (this.timer) {
         clearInterval(this.timer);
         this.timer = null;
+      }
+    },
+    handleTouchStart(e) {
+      this.touchStartX = e.changedTouches[0].screenX;
+    },
+    handleTouchEnd(e) {
+      this.touchEndX = e.changedTouches[0].screenX;
+      this.handleSwipe();
+    },
+    handleSwipe() {
+      const threshold = 50; // distanza minima per essere considerato swipe
+      if (this.touchEndX < this.touchStartX - threshold) {
+        this.next();
+      } else if (this.touchEndX > this.touchStartX + threshold) {
+        this.prev();
       }
     },
   },
