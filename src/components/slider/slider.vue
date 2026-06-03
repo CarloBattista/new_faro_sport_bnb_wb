@@ -6,10 +6,17 @@
   >
     <!-- Slides -->
     <div class="flex h-full transition-transform duration-700 ease-in-out" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
-      <div v-for="(image, index) in images" :key="index" class="min-w-full h-full relative">
+      <div v-for="(image, index) in images" :key="index" class="relative min-w-full h-full relative">
         <img
           :src="'/_resources/images/struttura' + image"
-          class="w-full h-full object-cover"
+          class="relative z-10 w-full h-full object-contain"
+          :alt="'New Faro Sport BNB - Foto ' + (index + 1)"
+          draggable="false"
+          loading="lazy"
+        />
+        <img
+          :src="'/_resources/images/struttura' + image"
+          class="absolute z-0 top-0 left-0 w-full h-full object-cover blurred-image-background"
           :alt="'New Faro Sport BNB - Foto ' + (index + 1)"
           draggable="false"
           loading="lazy"
@@ -156,4 +163,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.blurred-image-background {
+  filter: blur(10px) brightness(0.5);
+}
+</style>
